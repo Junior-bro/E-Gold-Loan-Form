@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Login</title>
+  <link rel="stylesheet" href="prince_style.css">
+</head>
+<body>
+  <div class="login-container">
+    <!-- Bank Logo -->
+    <img src="images/bank-logo.png" alt="Bank Logo" class="logo">
+
+    <h2>Bank Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+     <button type="submit">Login</button>
+      
+      <div class="form-footer">
+        <a href="forgot_password.html" class="footer-link">Forgot Password?</a>
+        <div class="new-user">
+          <span>New User?</span> 
+          <a href="register.html" class="footer-link">Register here</a>
+        </div>
+      </div>
+      </form>
+    <p id="error-message"></p>
+  </div>
+
+  <script src="prince_script.js"></script>
+</body>
+</html>
+

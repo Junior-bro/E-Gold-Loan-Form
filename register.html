@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | Secure Bank</title>
+  <link rel="stylesheet" href="prince_style.css">
+</head>
+<body>
+  <div class="login-container">
+    <img src="images/bank-logo.png" alt="Bank Logo" class="logo">
+    
+    <h2>Open New Account</h2>
+    <p class="instruction-text">Please fill in your details to begin the digital banking enrollment.</p>
+
+    <form id="registerForm">
+      <div class="input-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="reg-email">Email Address</label>
+        <input type="email" id="reg-email" placeholder="name@example.com" required>
+      </div>
+
+      <div class="input-group">
+        <label for="reg-username">Choose Username</label>
+        <input type="text" id="reg-username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="reg-password">Password</label>
+        <input type="password" id="reg-password" required>
+      </div>
+
+      <div class="input-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" required>
+      </div>
+
+      <div class="terms-group">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+      </div>
+
+      <button type="submit" class="btn-primary">Register</button>
+      
+      <div class="form-footer">
+        <span>Already have an account?</span>
+        <a href="Login_page.html" class="footer-link">Login here</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="register_script.js"></script>
+</body>
+</html>

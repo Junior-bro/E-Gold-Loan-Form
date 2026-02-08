@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00416A, #E4E5E6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #00416A;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #006699;
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.form-footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stacked for mobile-first/clean look */
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-link {
+    color: #004a99; /* Standard bank blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+.new-user {
+    color: #666;
+    margin-top: 5px;
+}
+
+.new-user a {
+    font-weight: bold;
+}
+
+/* Styling for instructions and feedback */
+.instruction-text {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.back-link {
+    color: #004a99;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    color: #27ae60;
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Secondary button for return trip */
+.btn-secondary {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: left;
+}
+
+.terms-group input {
+    width: auto; /* Overrides standard input width */
+    cursor: pointer;
+}
+
+.terms-group a {
+    color: #004a99;
+    text-decoration: none;
+}
+
+.terms-group a:hover {
+    text-decoration: underline;
+}

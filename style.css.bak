@@ -1,0 +1,991 @@
+body {
+    font-family: "Mangal","Nirmala UI", Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.page {
+    width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #000;
+}
+
+.bank-name {
+    text-align: center;
+    font-family: Algerian, "Times New Roman", serif;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allows checkboxes to wrap to next line if needed */
+    margin-bottom: 8px;
+width: 100%
+}
+
+/* UPDATED: Increased margin and added flex for better alignment */
+.row label {
+    font-weight: bold;
+    margin-right: 25px; /* Increased space between checkbox options */
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* NEW: Space between the checkbox square and the label text */
+.row input[type="checkbox"] {
+    margin-right: 8px;
+flex-grow: 1;
+
+}
+
+input, select {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 3px;
+    font-size: 14px;
+}
+
+.full {
+    width: 80%;
+}
+
+.right-label {
+    margin-left: 20px;
+}
+
+.hindi, .letter {
+    font-size: 14px;
+}
+
+.content p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.inline-input input {
+    width: 180px;
+}
+
+.inline-input.amount input {
+    width: 120px;
+}
+
+.inline-input.rate input {
+    width: 60px;
+}
+
+.input-row {
+    margin-bottom: 12px;
+}
+
+
+.auto-grow-number {
+    display: inline-block;
+    min-width: 30px; /* Smaller starting width for numbers */
+    border-bottom: 1px dashed #666;
+    padding: 0 5px;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: bottom;
+    font-family: 'Courier New', monospace; /* Monospace keeps numbers aligned */
+}
+
+.auto-grow-number:empty:before {
+    content: attr(data-placeholder);
+    color: #ccc;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 6px;
+    text-align: center;
+}
+
+.signature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.signature-box {
+    width: 180px;
+    height: 80px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 8px;
+}
+
+.print-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.photo-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 70px;
+}
+
+.photo-box {
+    width: 120px;
+    height: 150px;
+    border: 1px dashed #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 5px;
+    background: #fafafa;
+}
+
+.table-input {
+    width: 95%;
+    border: none !important;
+    text-align: center;
+    background: transparent;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media print {
+    .print-btn, .no-print, input[type="file"] {
+        display: none !important;
+    }
+    input {
+        border: none;
+    }
+    .photo-box {
+        border: 1px solid #000;
+    }
+}
+
+/* Add to your existing CSS */
+.bank-note-container {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    color: #000;
+}
+
+.bank-note-box { 
+    border: 1px solid #000; 
+    padding: 25px; 
+}
+
+/* Styling inputs to look like plain text */
+.editable-input {
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 2px;
+    background: transparent;
+}
+
+.editable-input:focus {
+    outline: none;
+    border-bottom: 1px solid #007bff;
+    background-color: #f9f9f9;
+}
+
+.full-width-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.bank-note-content {
+    line-height: 2;
+    text-align: justify;
+}
+
+.textarea-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 2;
+    overflow: hidden;
+}
+
+/* Print optimization: hide dashes when printing */
+@media print {
+    .editable-input { border-bottom: none; }
+    .bank-note-container { box-shadow: none; margin: 0; padding: 20px; }
+}
+
+/* General Agreement Document Styles */
+.agreement-container {
+    background-color: #fff;
+    max-width: 900px; /* Slightly wider to accommodate larger text */
+    margin: 30px auto;
+    padding: 60px 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    line-height: 1.8;
+    /* Increased base font size */
+    font-size: 12px; 
+}
+
+.stamp-area {
+    float: right;
+    width: 120px;
+    height: 120px;
+    border: 1px dashed #999;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers text inside */
+    text-align: center;
+    font-size: 10px;
+    padding: 5px;
+    margin-bottom: 100px;
+   
+    
+}
+
+.agreement-header {
+    text-align: center;
+    margin-bottom: 30px;
+    /* remove clear: both */
+}
+.agreement-header h2 {
+    margin: 0;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.agreement-input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0 5px;
+    background: transparent;
+    color: #000;
+}
+
+.agreement-input:focus {
+    outline: none;
+    border-bottom: 2px solid #0056b3;
+    background-color: #f0f7ff;
+}
+
+.agreement-section {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.bilingual-text {
+    font-size: 14px;
+}
+
+.signature-block {
+    margin-top: 50px;
+    text-align: right;
+}
+
+.signature-line {
+    border-top: 1px solid #000;
+    display: inline-block;
+    width: 250px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Print specific styling */
+@media print {
+    .agreement-container { box-shadow: none; margin: 0; padding: 20px; }
+    .agreement-input { border-bottom: none; }
+    .no-print { display: none; }
+}
+
+/* Container for the Schedule and Promissory Note */
+.legal-doc-container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    font-family: 'Times New Roman', serif;
+    color: #000;
+}
+
+.legal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styling for the Schedule */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Input fields that look like blank lines */
+.blank-input {
+    border: none;
+    border-bottom: 1px dashed #999;
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    background: transparent;
+    text-align: center;
+}
+
+.blank-input:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+    background-color: #fcfcfc;
+}
+
+.promissory-note {
+    margin-top: 50px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.stamp-placeholder {
+    width: 80px;
+    height: 100px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;      /* vertical centering */
+    justify-content: center;  /* horizontal centering */
+    text-align: center;       /* centers multi-line text */
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+@media print {
+    .blank-input { border-bottom: none; }
+    .legal-doc-container { border: none; box-shadow: none; }
+}
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+@media print {
+    /* Hide the placeholder text when printing */
+    .auto-grow-field:empty:before,
+    .auto-grow-number:empty:before {
+        content: "" !important;
+        display: none !important;
+    }
+}
+ /* Force A4 page size when printing */
+        @page {
+            size: A4;
+            margin: 20mm; /* Adjust margins as needed */
+        }
+
+
+/* Document Layout */
+.bank-doc-container {
+    background-color: #fff;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 60px;
+    font-family: 'Times New Roman', serif;
+    color: #000;
+    line-height: 1.6;
+    border: 1px solid #ddd;
+}
+
+.doc-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.doc-header h2 {
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+/* User Input Styling */
+.user-input {
+    border: none;
+    border-bottom: 1px dashed #666;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 2px 5px;
+    background: transparent;
+}
+
+.user-input:focus {
+    outline: none;
+    border-bottom: 1.5px solid #000;
+    background-color: #f9f9f9;
+}
+
+/* Table Structure */
+.bank-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.bank-table th, .bank-table td {
+    border: 1px solid #000;
+    padding: 12px;
+    text-align: center;
+}
+
+.bank-table input {
+    width: 90%;
+    text-align: center;
+}
+
+/* Signatures and Stamps */
+.stamp-box {
+    width: 100px;
+    height: 130px;
+    border: 1px solid #333;
+    float: right;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+}
+
+.sig-section {
+    margin-top: 50px;
+    text-align: right;
+}
+
+@media print {
+    .user-input { border-bottom: none; }
+    .bank-doc-container { border: none; margin: 0; padding: 20px; }
+}
+
+
+/* Delivery Letter and Declaration Styling */
+.bank-doc-container {
+    background-color: #fff;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 60px;
+    font-family: 'Times New Roman', serif;
+    color: #000;
+    line-height: 1.8;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.user-input {
+    border: none;
+    border-bottom: 1px dashed #666;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0 5px;
+    background: transparent;
+    text-align: center;
+}
+
+.user-input:focus {
+    outline: none;
+    border-bottom: 1.5px solid #000;
+}
+
+.page-break {
+    page-break-after: always;
+    break-after: page;
+}
+
+.declaration-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.declaration-table th, .declaration-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+@media print {
+    .user-input { border-bottom: none; }
+    .page-break { border: none; }
+}
+
+/* Receipt Specific Styling */
+.bank-letterhead {
+    text-align: center;
+    border-bottom: 1.5px solid #000;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.bank-letterhead h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #000;
+}
+
+.contact-info {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.receipt-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+    text-decoration: underline;
+}
+
+.witness-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.witness-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Report and Order Specific Styling */
+.report-order-container {
+    background-color: #fff;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 40px;
+    border: 1px solid #000;
+    font-family: 'Times New Roman', serif;
+    color: #000;
+}
+
+.report-header {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.report-body {
+    display: flex;
+    border-top: 1px solid #000;
+}
+
+.report-date-column {
+    width: 15%;
+    border-right: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.report-content-column {
+    width: 85%;
+    padding: 15px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.approval-footer {
+    border-top: 1px solid #000;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.auto-grow-field {
+    display: inline-block;
+    min-width: 100px; /* Your original width */
+    border-bottom: 1px dashed #666;
+    padding: 0 5px;
+    outline: none;
+    white-space: nowrap; /* Keeps it on one line; remove if you want multi-line */
+    vertical-align: bottom;
+}
+
+/* This creates the placeholder effect for contenteditable */
+.auto-grow-field:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    font-style: italic;
+    cursor: text;
+}
+
+.auto-grow-field:focus {
+    border-bottom: 1.5px solid #0056b3;
+    background-color: #f9f9f9;
+}
+
+
+
+/* --- FINAL PRINT FIX --- */
+@media print {
+    /* 1. Target the auto-grow fields and standard inputs */
+    .auto-grow-field, 
+    .auto-grow-number, 
+    .user-input, 
+    [contenteditable="true"],
+    input[type="text"],
+    input[type="number"] {
+        border: none !important;
+        border-bottom: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+        text-decoration: none !important;
+        display: none;
+    }
+
+    /* 2. Hide the placeholder text entirely so it doesn't print over empty fields */
+    .auto-grow-field:empty:before,
+    .auto-grow-number:empty:before {
+        content: "" !important;
+        display: none !important;
+    }
+
+    /* 3. Ensure the table cells don't have internal input borders */
+    .sync-table td input, 
+    .sync-table td span {
+        border: none !important;
+    }
+}
+
+/* --- FINAL PRINT FIX --- */
+@media print {
+    /* 1. Target the auto-grow fields and standard inputs */
+    .auto-grow-field, 
+    .auto-grow-number, 
+    .user-input, 
+    [contenteditable="true"],
+    input[type="text"],
+    input[type="number"] {
+        border: none !important;
+        border-bottom: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+        text-decoration: none !important;
+        display: none;
+    }
+
+    /* 2. Hide the placeholder text entirely so it doesn't print over empty fields */
+    .auto-grow-field:empty:before,
+    .auto-grow-number:empty:before {
+        content: "" !important;
+        display: none !important;
+    }
+
+    /* 3. Ensure the table cells don't have internal input borders */
+    .sync-table td input, 
+    .sync-table td span {
+        border: none !important;
+    }
+}
+
+/* Makes the span look and act like a growing input field */
+.sync-input {
+  display: inline-block;
+  min-width: 150px; /* Minimum starting width */
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 0 5px;
+  white-space: nowrap;
+  vertical-align: bottom;
+  transition: border-color 0.2s;
+}
+
+.sync-input:focus {
+  border-bottom: 2px solid #007bff; /* Optional: highlight on click */
+}
+
+/* Logic to show placeholder when empty */
+.sync-input:empty:before {
+  content: attr(aria-placeholder);
+  color: #999;
+  cursor: text;
+}
+
+.auto-grow-input {
+  display: inline-block;
+  min-width: 5px; /* Starts very small */
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 0 2px;
+  white-space: nowrap;
+  transition: width 0.1s ease; /* Smooth growing effect */
+}
+
+/* Placeholder logic */
+.auto-grow-input:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+}
+
+.auto-grow-number {
+  display: inline-block;
+  min-width: 60px; /* Room for 0.00 */
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 0 4px;
+  white-space: nowrap;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  vertical-align: bottom;
+}
+
+.auto-grow-number:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+}
+
+.auto-grow-field {
+  display: inline-block;
+  min-width: 50px;
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 0 5px;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* Placeholder Logic */
+.auto-grow-field:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+  cursor: text;
+}
+
+/* Optional: Highlight when typing */
+.auto-grow-field:focus {
+  border-bottom: 2px solid #2196F3;
+}
+
+/* Base style for all auto-growing fields */
+.auto-grow {
+    display: inline-block;
+    min-width: 60px;
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding: 0 4px;
+    white-space: nowrap;
+    vertical-align: bottom;
+    color: #333;
+}
+
+/* Placeholder behavior */
+.auto-grow:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    cursor: text;
+}
+
+/* Container styling for your form rows */
+.form-row {
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+.sync-words-field {
+    display: inline-block;
+    min-width: 150px; /* Minimum length of the line */
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding: 0 5px;
+    white-space: nowrap; /* Keeps the text on one line */
+    vertical-align: bottom; /* Aligns line with surrounding text */
+    color: #000;
+}
+
+/* Placeholder logic */
+.sync-words-field:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    cursor: text;
+}
+
+/* Optional: Subtle blue line when typing */
+.sync-words-field:focus {
+    border-bottom: 2px solid #0056b3;
+}
+
+.prince {
+  display: inline-block;
+  min-width: 100px; /* The starting length of the line */
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 0 5px;
+  white-space: nowrap; /* Forces text to stay on one line and grow sideways */
+  vertical-align: bottom;
+  color: #000;
+}
+
+/* Logic for the placeholder text */
+.prince:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+  cursor: text;
+}
+
+/* Optional: Changes line color when you click to type */
+.prince:focus {
+  border-bottom: 2px solid #000;
+}
+
+.king {
+    display: inline-block;
+    min-width: 150px; /* Starting line length */
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding: 0 5px;
+    white-space: nowrap;
+    vertical-align: bottom;
+    color: #000;
+}
+
+/* Shows the placeholder when the field is empty */
+.king:empty:before {
+    content: attr(data-placeholder);
+    color: #888;
+    font-style: italic;
+    cursor: text;
+}
+
+/* Highlight the line when user is typing */
+.king:focus {
+    border-bottom: 2px solid #000;
+}
+
+.king-date {
+    display: inline-block;
+    min-width: 100px;
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding: 0 4px;
+    white-space: nowrap;
+    vertical-align: bottom;
+    font-family: monospace; /* Monospace keeps date digits perfectly aligned */
+}
+
+.king-date:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+}
+
+.queen {
+    display: inline-block;
+    min-width: 30px; /* Starting width of the blank line */
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding: 0 4px;
+    white-space: nowrap; /* Ensures the field grows horizontally */
+    vertical-align: bottom;
+    color: #000;
+}
+
+/* Logic for placeholder text when field is empty */
+.queen:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    cursor: text;
+}
+
+/* Optional: Slight color change on focus */
+.queen:focus {
+    border-bottom: 2px solid #000;
+}
+
+/* Add this to your style.css */
+@media print {
+    #printButton,
+    #logoutButton {
+        display: none; /* Hide buttons when printing */
+    }
+}
+
+
+
+
+  nav {
+    background: linear-gradient(to right, #00416A, #00b4db); /* attractive gradient */
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* equal spacing */
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    flex: 1; /* distribute space equally */
+    text-align: center;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    color: #ffcc00; /* highlight on hover */
+  }

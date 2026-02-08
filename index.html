@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Prince_Gold_Loan_Form</title>
+    <link rel="stylesheet" href="style.css">
+     <style>
+        /* This part must stay in the head because @media print cannot be inline */
+        @media print {
+            body { background: none !important; margin: 0 !important; padding: 0 !important; }
+            .no-print { display: none !important; }
+            .a4-page { 
+                margin: 0 !important; 
+                border: none !important; 
+                box-shadow: none !important; 
+                width: 100% !important;
+            }
+            /* Force background colors/borders to print */
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+
+        /* Essential reset for the screen view */
+        body { background-color: #525659; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+    </style>
+</head>
+<body>
+        <!-- <button id="printBtn">🖨️ Print</button>  -->
+  <div class="no-print" style="width: 100%; background: #333; padding: 10px; display: flex; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 1000;">
+        <button onclick="window.print()" style="padding: 10px 30px; cursor: pointer; background: #27ae60; color: white; border: none; border-radius: 4px; font-weight: bold;">
+            🖨️ PRINT PAGE
+        </button>
+        <span style="color: white; align-self: center; font-family: sans-serif; font-size: 14px;">
+            A4 Canvas Template (210mm x 297mm)
+        </span>
+    </div>
+
+    <div class="a4-page" style="
+        width: 270mm; 
+        min-height: 297mm; 
+        background: white; 
+        margin: 30px auto; 
+        padding: 00mm; 
+        box-shadow: 0 0 15px rgba(0,0,0,0.5); 
+        box-sizing: border-box; 
+        position: relative; 
+        font-family: 'Mangal', 'Segoe UI', Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+    ">
+
+<div class="page" style="width: 270mm; min-height: 297mm; padding: 10mm; margin: auto; font-family: 'Mangal', 'Segoe UI', Arial, sans-serif; background: white; box-sizing: border-box; font-size: 18px; line-height: 1.5; color: #000;">
+
+    <h2 style="text-align: center; font-size: 32px; margin-bottom: 5px; font-family: Algerian, serif;">MAHISMATI NAGRIK SAHKARI BANK LTD. MANDLA</h2>
+    <p style="text-align: center; font-size: 20px; margin-bottom: 25px; border-bottom: 2px solid #000; padding-bottom: 10px;">
+        <strong>Application-cum-letter of pledge for OD/loan against Gold Jewelry</strong>
+    </p>
+
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 18px; font-weight: bold;">
+        <div>BORROWER PROFILE</div>
+        <div style="text-align: right;">
+            <p style="margin: 5px 0;">GL Account No : <input type="text" style="font-size: 18px; border: none; border-bottom: 1px solid #000; width: 160px;"></p>
+            <p style="margin: 5px 0;">Cust ID : <input type="text" style="font-size: 18px; border: none; border-bottom: 1px solid #000; width: 160px;"></p>
+        </div>
+    </div>
+
+    <form style="font-size: 18px;">
+        <!-- <div style="margin-bottom: 12px;"><label style="font-weight: bold;">1. Name :</label> <input type="text" style="width: 80%; border: none; border-bottom: 1px solid #000; font-size: 18px; outline: none;"></div> -->
+       <strong>1. Name : </strong> <span  contenteditable="true" class="king" oninput="syncKing(this)" data-placeholder="Enter name"></span><br>
+        <!-- <div style="margin-bottom: 12px;"><label style="font-weight:bold;">2. Complete Address :</label> <input type="text" style="width: 75%; border: none; border-bottom: 1px solid #000; font-size: 18px; outline: none;"></div> -->
+        <strong>2. Complete Address :</strong><span style= "margin-top: 10px;" contenteditable="true" class="prince" oninput="syncPrince(this)" data-placeholder="Enter Complete Address"></span> <br>
+        <div style="margin-bottom: 12px; margin-top: 10px;">
+            <label style="font-weight: bold;">3. Category :</label>
+            <label style="font-weight: bold;"><input type="checkbox"> SC</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> ST</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> OBC</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> GENERAL</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> OTHER</label>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+            <label style="font-weight: bold;">4. Minority Community :</label>
+            <label style="font-weight: bold;"><input type="checkbox"> YES</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> NO</label>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+            <label style="font-weight: bold;">5. Religion :</label>
+            <label style="font-weight: bold;"><input type="checkbox"> HINDU</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> MUSLIM</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> SIKH</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> CHRISTAIN</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> JAIN</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> BUDDHIST</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> OTHERS</label>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+            <label style="font-weight: bold;">6. Category of Farmer :</label>
+            <label style="font-weight: bold;"><input type="checkbox"> Marginal</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> Small</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> Agri. Laborer</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> Tenant Farmer</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> Others</label>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+            <label style="font-weight: bold;">7. Priority Sector :</label>
+            <label style="font-weight: bold;"><input type="checkbox"> Priority</label> &nbsp;
+            <label style="font-weight: bold;"><input type="checkbox"> Non Priority</label>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+            <label style="font-weight: bold;">8. Purpose of Loan :</label>
+            <input type="text" style="width: 60%; border: none; border-bottom: 1px solid #000; font-size: 18px; outline: none;">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+            <div style="flex: 1; display: flex;">
+                <label style="white-space: nowrap; font-weight:bold;" >9. Occupation :</label>
+                <input type="text" style="border: none; border-bottom: 1px solid #000; font-size: 18px; width: 60%; margin-left: 10px; outline: none;">
+            </div>
+            <div style="display: flex; margin-left: 20px;">
+                <label style="white-space: nowrap; font-weight:bold;">10. Monthly Income :</label>
+                <input type="number" style="border: none; border-bottom: 1px solid #000; font-size: 18px; width: 140px; margin-left: 10px; outline: none;">
+            </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <label style="font-weight:bold;">11. Mobile No :</label>
+            <select id="countryCode" style="padding: 5px; font-size: 16px; border: 1px solid #000;">
+                <option value="+91" selected>+91 (India)</option>
+                <option value="+1">+1 (USA)</option>
+                <option value="+44">+44 (UK)</option>
+            </select>
+            <input type="tel" id="mobileNumber" style="border: none; border-bottom: 1px solid #000; font-size: 18px; width: 180px; outline: none;">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+            <div style="flex: 1; display: flex;">
+                <label style="font-weight:bold;">12. Date of Birth :</label>
+                <input type="date" style="border: none; border-bottom: 1px solid #000; font-size: 18px; width: 180px; margin-left: 10px; outline: none; background: transparent;">
+            </div>
+            <div style="display: flex;">
+                <label style="font-weight:bold;">13. Gender :</label>
+                <select style="border: none; font-weight:bold; border-bottom: 1px solid #000; font-size: 18px; width: 120px; margin-left: 10px; outline: none; cursor: pointer;">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+            <label style="font-weight:bold;">14. Saving / Current A/c No :</label>
+            <input type="text" style="width: 40%; border: none; border-bottom: 1px solid #000; font-size: 18px; outline: none;">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 30px;">
+            <div style="flex: 1; margin-right: 20px; font-size: 19px; line-height: 1.8;">
+                <strong>
+                    <p style="margin: 0;">सेवा में,<br>प्रबंधक / मुख्य कार्यपालन अधिकारी<br>महिष्मती नागरिक सहकारी बैंक लि. मंडला</p>
+                    <p style="margin-top: 20px;">प्रिय महोदय / Dear Sir,</p>
+                </strong>
+            </div>
+            <div style="flex: 0 0 160px; text-align: center;">
+  <div style="border: 2px solid #000; width: 150px; height: 180px; display: flex; align-items: center; justify-content: center; font-size: 14px;">
+    <img id="photoPreview" src="" alt="Affix Passport Size Photo" style="max-width: 100%; max-height: 100%; display: none;">
+    <span id="photoText">Affix Passport <br> Size Photo</span>
+  </div>
+
+  <input type="file" class="no-print" onchange="loadPhoto(event)" accept="image/*" style="margin-top: 5px; font-size: 12px;">
+</div>
+        </div>
+
+        <div style="font-size: 18px; line-height: 2.4; text-align: justify; margin-top: 20px;">
+            <p>1. मैं <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span>आपसे अनुरोध करता हूं कि मुझे उपरोक्त दर्शित कार्य हेतू रू. 
+              <span contenteditable="true" class="user-input auto-grow-number sync-loan" role="textbox" inputmode="decimal" data-placeholder="0.00"oninput="syncLoan(this)"onblur="formatToTwoDecimals(this)"></span>
+  की वित्तीय सहायता स्वीकृत करें जिस पर
+            <span contenteditable="true" class="sync-rate auto-grow-input" role="textbox" inputmode="decimal" data-placeholder="0.00" oninput="syncAndGrow(this)"></span>
+            % प्र.व. ब्याज दर या ऐसी दर ब्याज लगाया जाए जिसमें दांडिक दर/दरें शामिल हो और जो ऐसे अंतराल पर चक्रवृद्धि होगा जो समय समय पर मुझे सूचित किये बिना बैंक द्वारा निर्धारित किया जाय, जिसके अधिकार को मैं अभिव्यक्त अधित्याग करता हूं ।
+</p>
+
+            <p>2. मुझे मंजूर किये जाने वाले ऋण की बकाया राशि की चुकौती के लिए मैं एतद् द्वारा नीचे दी गई अनूसूवी में उल्लेखित स्वर्ण आभूषणों को प्रतिभूति के रूप में बंधक रखता हूं। मुझे मंजूर किये गये / इसके बाद मंजूर किये जाने वाले किसी भी अग्रिम / वित्तीय सहायता के संबंध में मेरे द्वारा संदेह अन्य किसी देयता और बैंक के किसी भी कार्यालय में बैंक को देय या इसके बाद देय होने वाली रकम चाहे एकल रूप में हो या संयुक्त रूप में हो को आप प्रतिभूति को जमानत के रूप में रख सकतें हैं ।</p>
+
+            <p>3. मैं पुष्टि करता हूं कि उक्त आभूषण का असली मालिक हूं और अनूसूची में दिये गये स्वर्ण आभूषणों पर कोई पूर्व ग्रहणाधिकार का सृजन नही किया गया हैं। मुझे ज्ञात हैं कि बैंक ऋण को वापस मांगने का अधिकार रखता है ।</p>
+
+            <p>4. मैं मानता हूं कि इस ऋण से संबंधित नियमों को मुझे पढ़कर सुनाया गया हैं और मुझे स्पष्ट किया गया हैं जिसका मैं पालन करने में सहमत हूं।</p>
+
+            <p>5. मेरे ऋण खातें में स्थित बकाया राशि को किसी भी समय मांग पर अदा करने के लिए मैं सहमत हूं और ऋण तथा ब्याज को अदा करने में मेरे द्वारा चूक होने पर मुझे बिना सूचित किये अनूसूची में उल्लेखित प्रतिभूतियों का निपटान करने के लिए बैंक प्राधिकृत हैं और निवल बिक्री आय के समायोजन में हुई कमी को बैंक द्वारा मांग करने पर मेरे द्वारा अदा किया जायेगा । मेरी देय राशियों के विनियोजन करने के बाद बाकी बची राशि को मेरे बचत / चालू खाता में रख सकते हैं ।</p>
+
+            <p>6. मुझे ज्ञात हैं कि खातें में स्थित देयताओं को ब्याज के बिना रूपयें <span contenteditable="true" class="queen" oninput="syncQueen(this)" data-placeholder="0.00"></span> की मासिक किस्तों में अदायगी करना है। ब्याज को योजना के अंतर्गत निर्धारिता अनुसार प्रथक से अदा करना हैं।</p></p>
+
+            <p>7. मैं उपर्युक्त प्रयोजन की वास्तविकता की पुष्टि करता हूं और आभूषण ऋण की राशि को केवल उक्त उद्देश्य के लिए उपयोग करने के लिए वचन देता हूं।</p>
+
+            <p>8. मैं पुष्टि करता हूं कि अब आवेदित आभूषण ऋण में से प्राप्त आस्तियों पर बीमा करवाने के लिए बैंक द्वारा व्यवस्था करने की जरूरत नहीं हैं।</p>
+        </div>
+
+        <div style="border: 1px dashed #000; padding: 15px; margin: 25px 0; font-size: 20px;">
+            <strong><p style="margin-top: 0;">नामांकन / Nomination</p></strong>
+            <p style="font-size: 16px; line-height: 1.6;">किसी संभाव्यता की दशा में मैं निम्नलिखित को अपने नामिनी के रूप में नामित करता हूं जो ऋण की पूण् चुकौती/बंद होने के बाद मेरे द्वारा गिरवी रखे गये आभूषणों को प्राप्त करेगा या व्यतिक्रमी की दशा में स्वर्ण आभूषणों के अतिरिक्त बिक्री प्राप्य राशियों को प्राप्त करने हेतू अधिकृत करता हूं ।</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 10px;">
+                <div>नामिनी का नाम: <input type="text" style="font-size: 18px; border: none; border-bottom: 1px solid #000; width: 200px;"></div>
+                <div>उम्र: <input type="number" style="font-size: 18px; border: none; border-bottom: 1px solid #000; width: 60px;"></div>
+                <div>रिश्ता: <input type="text" style="font-size: 18px; border: none; border-bottom: 1px solid #000; width: 120px;"></div>
+                <div style="width: 100%;">पता: <input type="text" style="font-size: 18px; border: none; border-bottom: 1px solid #000; width: 85%;"></div>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; font-size: 20px;">गिरवी रखे गये आभूषणों के ब्यौरे / DESCRIPTION OF THE JEWELS PLEDGED</h3>
+        <table class="sync-table" id="table2">
+    <thead>
+        <tr>
+            <th width="5%">क्र.</th>
+            <th width="45%">ब्यौरे</th>
+            <th width="15%">सकल वजन (ग्रामों में)</th>
+            <th width="15%">नियत वजन (ग्रामों में )</th>
+            <th width="20%">मूल्यांकन (₹)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>2</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>3</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>4</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>5</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>6</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>7</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+
+        <tr class="total-row" style="font-weight:bold;">
+            <td>कुल</td>
+            <td><input type="text" class="user-input" style="width:90%;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+        <div style="display: flex; justify-content: space-between; margin-top: 50px; font-size: 18px;">
+            <div>
+                स्थान : <input type="text" style="border: none; border-bottom: 1px solid #000; width: 150px; font-size: 18px;"><br><br>
+                दिनांक : <span contenteditable="true" style="border-bottom: 1px solid #000; min-width: 120px; display: inline-block;"></span>
+            </div>
+            <div style="text-align: center;">
+                <div style="border-bottom: 1px solid #000; width: 250px; height: 60px; margin-bottom: 10px;"></div>
+                <strong>उधारकर्ता के हस्ताक्षर</strong>
+            </div>
+        </div>
+<br><br><br><br>
+        <div style="border: 2px solid #000; padding: 15px; margin-top: 40px; font-size: 18px; line-height: 1.6;">
+            <p style="margin-top: 0;">मैं घोषित करता हूं कि मैंने उपर्युक्त स्वर्ण आभूषणों का परीक्षण किया गया और मेरी सर्वोत्तम जानकारी और कुशलता के अनुसार उपर्युक्त मूल्य की गारंटी देता हूं।</p>
+            <div style="display: flex; justify-content: space-between; margin-top: 30px; align-items: flex-end;">
+                <div>
+                    स्थान : <input type="text" style="border: none; border-bottom: 1px solid #000; width: 140px; font-size: 18px;"><br><br>
+                    दिनांक : <span contenteditable="true" style="border-bottom: 1px solid #000; min-width: 120px; display: inline-block;"></span>
+                </div>
+                <div style="text-align: center;">
+                    <div style="border-bottom: 1px solid #000; width: 200px; height: 40px;"></div>
+                    <label style="font-weight: bold; margin-top: 5px; display: block;">हस्ताक्षर मूल्यांकनकर्ता</label>
+                </div>
+            </div>
+        </div>
+<br><br><br><br><br><br><br><br>
+        <div style="border: 2px solid #000; padding: 20px; margin-top: 40px; page-break-inside: avoid;">
+            <div style="text-align: center; font-weight: bold; font-size: 24px; text-decoration: underline; margin-bottom: 20px;">
+                प्रबंधक का मंजूरी आदेश
+            </div>
+            <div style="line-height: 2.8; font-size: 19px; text-align: justify;">
+                श्री/श्रीमती <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span>  
+                को दिनांक <span contenteditable="true" class="king-date" oninput="syncDate(this)" data-placeholder="DD/MM/YYYY"></span> को 
+                  <span 
+    contenteditable="true" 
+    class="sync-rate auto-grow-input" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncAndGrow(this)"
+  ></span>
+  <span style="margin-left: 2px;">%</span> वार्षिक ब्याज दर पर रू. 
+                  <span contenteditable="true" class="user-input auto-grow-number sync-loan" role="textbox" inputmode="decimal" data-placeholder="0.00" oninput="syncLoan(this)" onblur="formatToTwoDecimals(this)"></span>
+                
+<span>अक्षरी रू.</span>
+<span contenteditable="true" 
+      class="sync-input" 
+      oninput="syncAll(this)" 
+      aria-placeholder="शब्दों में राशि"
+      style="display:inline-block; min-width:100px; border-bottom:1px solid #000;">
+</span>
+<span style="margin-left: 5px;">के लिए ऋण मंजूर किया गया।</span>
+
+            
+                <p style="margin-top: 10px; font-size: 18px;">आवेदक के साथ विचार विमर्ष करने पर और इस आवेदन पत्र में प्रस्तुत महत्वपूर्ण तथ्यों के अनुसार, मैं उस प्रयोजन जिस के लिए आभूषण ऋण मंजूर किया जा रहा हैं, की वास्तविकता से संतुष्ट हूं।</p>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 80px;">
+                <div style="text-align: center; width: 45%;">
+                    <div style="border-top: 1px solid #000; padding-top: 8px; font-weight: bold;">कक्ष प्रभारी</div>
+                </div>
+                <div style="text-align: center; width: 45%;">
+                    <div style="border-top: 1px solid #000; padding-top: 8px; font-weight: bold;">प्रबंधक / मुख्य कार्यपालन अधिकारी</div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function syncDate(el) {
+        // Find all elements with class 'king-date' and update them
+        document.querySelectorAll('.king-date').forEach(dateField => {
+            if(dateField !== el) dateField.innerText = el.innerText;
+        });
+    }
+</script>
+
+<br><br><br><br><br><br><br><br><br>
+<div class="page-break"></div>
+
+<div class="report-order-container">
+    <div class="report-header">
+        <p><strong>टीप पत्र (NOTE SHEET)</strong></p>
+        <h2 style="margin: 5px 0;">माहिष्मती नागरिक सहकारी बैंक लिमिटेड, मण्डला (म०प्र०)</h2>
+        <p>विषय – <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span> का स्वर्ण आभूषणों का ऋण प्रकरण विषयक।</p>
+        <h3 style="margin-top: 10px; text-decoration: underline;">Report & Order</h3>
+        <p>टीप प्रतिवेदन एवं आदेश</p>
+    </div>
+
+    <div class="report-body">
+        <div class="report-date-column">
+            <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span>
+        </div>
+        <div class="report-content-column">
+            उपरोक्त विषयांतर्गत लेख हैं कि बैंक खातेदार श्री/श्रीमती <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span>
+            निवासी <span contenteditable="true" class="prince" oninput="syncPrince(this)" data-placeholder="निवास स्थान"></span> 
+    म.प्र. द्वारा स्वर्ण आभूषणों को रहन रखकर ऋण चाहा गया है। स्वर्ण आभूषणों का परीक्षण बैंक के अधिकृत मूल्याकंनकर्ता  <input type="text" class="user-input" value="श्री प्रसन्न सराफ" style="width: 90px;" >फर्म / प्रतिष्ठान का नाम<input type="text" class="user-input" value="मेसर्स आभूषण ज्वेलर्स " style="width: 150px;">  पता<input type="text" class="user-input" value="अग्रवाल चौक, मण्डला" style="width: 150px;" >  द्वारा स्वर्ण परीक्षण उपरांत आभूषणों का सकल वजन <input type="text" class="user-input" style="width: 70px;"> ग्राम एवं शुद्ध वजन <input type="text" class="user-input" style="width: 70px;"> ग्राम आंका गया है। इस आशय का मूल्यांकनकर्ता द्वारा प्रमाण पत्र प्रस्तुत किया गया है। स्वर्ण आभूषणों का बाज़ार मूल्य दिनांक <input type="text" class="user-input" style="width: 80px;"> को रू. <input type="text" class="user-input" style="width: 100px;"> अक्षरी <input type="text" class="user-input" style="min-width: 250px;">  रू. मात्र प्रति दस ग्राम की दर से रू. <input type="text" class="user-input" style="min-width: 100px;">अक्षरी <input type="text" class="user-input" style="width: 250px;">  रू. मात्र होता है। 
+            अतः बाज़ार मूल्य का  <input type="text" class="user-input" style="width: 20px;" >प्रतिशत, अर्थात् रू. <input type="text" class="user-input" style="width: 120px;"> अक्षरी <input type="text" class="user-input" style="width: 250px;">  रू.मात्र एक वर्ष (12 माह) तक की अवधि के लिए <div style="display: inline-flex; align-items: center; font-family: sans-serif;">
+  <span 
+    contenteditable="true" 
+    class="sync-rate auto-grow-input" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncAndGrow(this)"
+  ></span>
+  <span style="margin-left: 2px;">%</span>
+</div>वार्षिक ब्याज के लिए ऋण प्रदाय किया जा सकता है। आवेदक द्वारा <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span> अक्षरी <span contenteditable="true" class="sync-input" oninput="syncAll(this)"aria-placeholder=" राशि (शब्दों में)"></span>रूपये मात्र के ऋण की मांग की गई है। उक्त ऋण की पात्रता है। आवेदक द्वारा केवायसी के दस्तावेज़ की छायाप्रति स्वप्रमाणित कर प्रस्तुत की गई। अतः रू. <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span> अक्षरी <span contenteditable="true" class="sync-input" oninput="syncAll(this)"aria-placeholder=" राशि (शब्दों में)"></span>रूपये मात्र एक वर्ष (12 माह) तक की अवधि के लिए ऋण प्रदाय करने की स्वीकृति हेतु प्रस्तुत ।
+
+
+
+
+            <div style="text-align: right; margin-top: 30px;">
+                <p>__________________________</p>
+                <p><strong>कक्ष प्रभारी</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="report-body" style="border-top: 1px solid #000;">
+        <div class="report-date-column">
+            <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span>
+        </div>
+        <div class="report-content-column">
+            श्री/श्रीमती <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span>  को स्वर्ण आभूषणों पर ऋण रू. <span contenteditable="true" class="sync-input" oninput="syncAll(this)"aria-placeholder=" राशि (शब्दों में)"></span>
+            अक्षरी <span contenteditable="true" class="sync-input" oninput="syncAll(this)"aria-placeholder=" राशि (शब्दों में)"></span> स्वीकृत करने की अनुशंसा की जाती है।
+
+            <div style="text-align: right; margin-top: 30px;">
+                <p>__________________________</p>
+                <p><strong>ऋण प्रभारी</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="approval-footer">
+        
+        <div style="margin-top: 70px;">
+            <p><strong>वरिष्ठ प्रबंधक</strong></p>
+            <p>माहिष्मती नागरिक सहकारी बैंक लिमिटेड, मण्डला</p>
+            दिनांक <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+  <div class="page_general">
+    <div class="stamp-area">
+        (Place Revenue Stamp / Special Adhesive Here)
+    </div>
+
+    <div class="agreement-header">
+        <h4>साधारण करार</h4>
+        <h2>GENERAL AGREEMENT</h2>
+        <small>(प्रदत्त स्टांप अधिनियम के अनुसार स्थापित किया जाय)</small>
+    </div>
+
+    <div class="agreement-section">
+        <strong>यह करार / THIS AGREEMENT EXECUTED BY</strong><br>
+        श्री <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span>
+         
+        निवासी <span 
+    contenteditable="true" 
+    class="prince" 
+    oninput="syncPrince(this)" 
+    data-placeholder="निवास स्थान"
+  ></span>
+        घोषित कार्यों के अनुसार व्यावसायिक कार्य को शामिल करके व्यावसायिक की लागत को वहन करने के लिए मुझे/हमें 
+        (रू. <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span> 
+        अक्षरी <span contenteditable="true" class="sync-input" oninput="syncAll(this)"aria-placeholder=" राशि (शब्दों में)"></span> रुपये) 
+        ऋण/अधिविकर्ष के रूप में स्वीकृत करने का अनुरोध करता हूं/करते हैं।जो प्रचलित आधार दर से
+  <span 
+    contenteditable="true" 
+    class="sync-rate auto-grow-input" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncAndGrow(this)"
+  ></span>
+  <span style="margin-left: 2px;">%</span>
+अधिक ब्याज के साथ 
+<!-- <span contenteditable="true" class="king-date" oninput="syncDate(this)" data-placeholder="DD/MM/YYYY"></span> -->
+ <input type="text" class="user-input" placeholder="दिनांक" style="width: 80px;"> 
+ <!-- <input type="text" id="autoDate" class="user-input" style="width: 80px; border: none; border-bottom: 1px solid #000; outline: none; background: transparent; font-weight: bold;"> -->
+     को या उसके पहले पुनर संदेय होगा। उपर्युक्त अनुसार मैं / हम ऋण चुकता नही कर पाता/पाते हैं तो ऐसी शेष राषि और ऐसी परवर्ती शेष राषियों पर खातें में बकाया मूल शेष राषि के रहते, व्याज मासिक आधार पर चक्रवर्धित होगा । वास्तविक ऋणदान दर समीक्षा और भारतीय रिजर्व बैंक / बैंक मार्गनिर्देषों और उधारकर्ता की वित्त स्थिति में होने वाले परिवर्तनों की बदौलत समय-समय पर परिवर्तन के अधीन होगी। भारतीय रिजर्व बैंक द्वारा निर्देषित अनुसार समय-समय पर बढ़त के साथ-साथ ब्याज दर के बदलने के बारे में बैंक द्वारा सूचित किये जाने को मैं / हम विनिर्दिष्ट्तया अधित्यजित करता हूं/ करते हैं।
+
+    </div>
+
+    <div class="agreement-section ">
+     <p>   I/We request you to grant me/us financial assistance by way of loan/OD for Rs. 
+        <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span>
+        ( <label> In Words) Rs.</label>
+  <span contenteditable="true" 
+      class="sync-words-field" 
+      oninput="syncWords(this)" 
+      data-placeholder="Enter amount"></span> only) 
+        to meet the cost of agriculture operations including production and investment requirement payable on or before 
+        <input type="text" class="user-input" placeholder="Date" style="width: 80px;">
+        with interest at
+  <span 
+    contenteditable="true" 
+    class="sync-rate auto-grow-input" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncAndGrow(this)"
+  ></span>
+  <span style="margin-left: 2px;">%</span>
+above ongoing Base rate.
+If I/we fail to repay the loan as stated above, the interest shall be compounded monthly with the principal balance outstanding in the account, on such balance and on such successive balances. The actual lending rate is subject to review and variation from time to time as per RBI/Bank guidelines and due to any changes in the financials of the borrower. Base Rate shall also be subject to change from time to time. The Base Rate notified by the Bank on its Website and notice board of the Bank, shall be conclusive notice to me /us in respect of change of Base Rate.
+<br>I/We hereby specifically waive serving notice by the Bank for any variation in interest rate including enhancement from time to time as may be directed by the Reserve Bank of India.
+<br>सभी प्रासंगिक व्यय / खर्च प्रभार भी समय-समय पर मुझ से/हम से वसूली जाए। मैं/ हम इस बात के लिए भी राजी हैं/हूं कि देय तिथि पर या बैंक द्वारा मांग पर भुगतान में चूक होने पर उस/उन बकाया दिनों के लिए समय - समय पर बैंक द्वारा खातें में प्रभारित ब्याज दर पर 
+  <span 
+    contenteditable="true" 
+    class="sync-rate auto-grow-input" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncAndGrow(this)"
+  ></span>
+  <span style="margin-left: 2px;">%</span>
+ प्र.व. अधिक चक्रवृद्धि मासिक / ब्याज अदा करने के लिए सहमत हूं/ हैं। <br>
+All other incidental expenses/costs/charges including handling charges may be recovered from me/us from time to time. I/We further undertake to pay interest at 
+  <span 
+    contenteditable="true" 
+    class="sync-rate auto-grow-input" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncAndGrow(this)"
+  ></span>
+  <span style="margin-left: 2px;">%</span>
+p.a. above the rate of interest charged to the account from time to time compounded /monthly from the due date of payment, for the day/s of default or from the date of demand by the bank, whichever is earlier, till payment is received in full.
+     </p>
+    </div>
+
+    <div class="agreement-section">
+      <p>   मै / हम सहमत हूँ / हैं कि ऋण राशि दिनांक 
+       <input type="text" class="user-input" placeholder="दिनांक" style="width: 80px;">
+        को या उसके पूर्व  एकमुश्त राशि में या किस्तों के साथ  या एकमुश्त राशि के साथ संदाय होगा (जो आइटम लागू नहीं हैं उन्हें काट दें)।
+   
+
+    
+        I/We agree that the loan amount is payable in 
+  <input type="text" class="user-input" placeholder="Date" style="width: 80px;">
+        monthly installments of Rs.<span contenteditable="true" class="queen" oninput="syncQueen(this)" data-placeholder="0.00"></span> each, 
+        or in one lump sum on or before  <input type="text" class="user-input" placeholder="Date" style="width: 80px;">     interest debited being payable along with installments or lump sum (Strike off items not applicable). </p>
+    </div>
+
+    <div class="agreement-section" style="font-size: 15px;">
+<p>
+       मुझे/हमें या जिस के लिए मैं / हम गारंटीकर्ता/ओं या सह-आभारियों के रूप में रहूंगा/ रहेगें उस अन्य व्यक्ति के लिए मेरे/हमारे कहने पर आपके द्वारा स्वीकृत किये जाने वाले ऋण/ऋणों के बकाया शेष की चुकौती के लिए प्रतिभूति के रूप में मैं / हम एतन्नीचे अनुसूची में बताये गये स्वर्ण आभूषणों को एतद्द्वारा आपके पास गिरवी रखता हूं/ रखते हैं। मेरे / हमारे ऋण खातें में बकाया शेष की कभी भी मांग किये जाने पर चुका देने के लिए मैं/ हम वचन देता हूं/देते हैं और ऋण और/या मासिक ब्याज चुकता करने में मेरे / हमारे असफल हो जाने पर अनुसूची में जिक्र की गई प्रतिभूतियों को निपटा देने के लिए बैंक को प्राधिकृत किया जाना हैं और निवल धनागमों में समायोजन कर दिये जाने के बाद शेष कमी बैंक द्वारा मांगे जाने पर मेरे / हमारे द्वारा चुकता कर दी जाएगी। मेरी / हमारी देयताओं (हैं तो) के समंजन के बाद शेष विक्रय धनागम आपके पास मेरे/हमारे बचत/चालू खाता में घरे जा सकते हैं या मेरी/हमारी लागत पर मुझे / हमें प्रेषित किये जा सकतें हैं। प्रधान ऋणी के रूप में हो या प्रतिभूति के रूप में, चाहे एकल रूप से हो या अन्यों के साथ संयुक्त रूप से, बैंक किसी भी कार्यालय में किसी खातें में स्वीकृत किये गये या इससे आगे स्वीकृत किये जाने वाले किसी अग्रिम/वित्त सहायता के सिलसिले में मेरे/हमारे द्वारा संदाय सारी या किसी / किन्ही अन्य देयता/देयताओं के लिए इस प्रतिमूति को धरने और बेचने और धनागमों को समंजित करने के लिए आपकों हक हैं।<br>
+As security for repayment of the outstanding balance of the loan/s which you may grant to me/us or to any person at my/our instance for whom I/we stand as guarantor/s or coobligant/s, I/We hereby pledge with you gold jewellery as mentioned in the schedule hereinbelow. I/We undertake to repay the amount outstanding in my/our loan account/s on demand at any time and in case of failure on my/our part to my/our part to repay the loan/s and/ or money interest, the Bank is authorized to dipose off the securities in the schedule and shortfall after adjustment of the net sale proceeds shall be repaid by, may be held by you, in our SBI CA account with you or sent to me/us at our cost. You are further entitled to hold and sell and appropriate the proceeds of this security to all or any other liability/ies payable by me/us, in respect of any advance/financial assistance granted/to be granted hereafter and account whatsoever, whether owing and that may be owing hereafter to the Bank at any office of the Bank or on any solely or jointly with others and whether as principal debtor or surety.<br>मैं/ हम पुष्टि करता हूं/ करते हैं कि मैं/ हम कथित आभूषणों का सच्चा / सच्चे मालिक हूं/ हैं और अनूसूची में वर्णित स्वर्णाभूषणों पर कोई पूर्व ग्रहणाधिकार या भार सृजित नही किया गया। मुझे / हमें मालूम है कि बैंक को ऋण की कभी भी वापसी मांग करने का अधिकार हैं।<br>
+
+I/We confirm that I/We am/are the true/bona fide owner(s) of the said jewellery and that no prior lien or encumbrance has been created on the gold jewellery described in the schedule. I/We understand that the Bank reserves the right to demand repayment of the loan at any time.<br>
+
+मैं / हम मानता / मानते हूं/ हैं कि इस ऋण संबंधी कारोबार नियम मुझे / हमें पढ़कर सुनाये गये हैं और समझाये गये हैं ।<br>
+
+I/We hereby admit the rules of business relating to this loan have been read over and explained to me/us.
+
+<br>कथित किसी / किन्ही खाते / खातों में मेरे / हमारे द्वारा संदाय अंतिम शेष का भुगतान करने के लिए मैं / हम व्यक्तिगत तौर पर बाध्य हूं/ हैं ।<br>
+
+I am/we are personally liable to pay any ultimate balance remaining payable by me/us in any of said accounts. <br>मैं / हम आगे घोषणा और सहमति व्यक्त करता हूं/ हैं कि इससे आगे किसी प्रकार का ऋण और या वित्त सुविधा/ये अग्निग प्रदान करने के लिए मेरे / हमारे द्वारा आपसे अपेक्षित किये जाने पर और बैंक द्वारा ऐसे ऋण और / या सुविधायें स्वीकृत किये जाने पर इस गिरवी पत्र को ही उस प्रयोजन के लिए पर्याप्त मानना चाहिए और यह काम आना चाहिए। कभी भी या समय-समय पर बकाया रहने वाली सारी या किन्ही राषियों की चुकौती के लिए प्रतिभूति के रूप में, एतद्वारा सृजित व्यक्तिगत्त देयता के अलावा गिरवी रखे गये और इसके आगे गिरवी रखे जाने वाले आभूषणों को आप तब तक धर सकतें हैं जब तक यह अनुरोध आप द्वारा निरस्त नही किया जाता या बैंक के साथ सहमत सारी अपेक्षाओं के मेरे / हमारे द्वारा अनुपालन किये जाने के बाद मुझे/हमें वापस नही भेजा जाता ।
+<br>I/we further declare and agree that in the event of my/our requiring you to advance any loan and/or financial facility/ies at any time hereafter and the Bank granting such loans and/or facilities for which purpose this letter of pledge itself should be treated and should serve as sufficient for that purpose. You may hold the jewels pledged and that may be pledged hereafter as security for repayment of all or any amounts that may outstand at any time and from time to time, apart from the personal liability created thereby until this request is cancelled by you or returned to me/us after I/we comply with all the requirement as agreed to with the Bank.<br>
+गिरवी रखे गये आभूषणों को मेरे / हमारे द्वारा या जिस व्यक्ति / व्यक्तियों के लिए मैं / हम गारंटीकर्ता / सह-आभारी / आभारियों के रूप में रहता / रहतें हूं/ हैं, उस/उन व्यक्ति / व्यक्तियों द्वारा देय और संदाय किसी / किन्ही खातें / खातों में समायोजित करने हेतू बेच देने के लिए विक्रय धनागमों के समंजन के बाद कमी को शामिल करके, उपर्युक्त देयताओं को वसूली करने में आगे बढ़ने के आपके अधिकारों के प्रति बिना किसी पूर्वधारणा के मैं / हम आपकों विनिर्दिष्ट अधिकार और देयतायें वसूल करने के लिए आप द्वारा जैसा भी उपयुक्त समझा जायें गिरवी रखें गयें आभूषणों को सार्वजनिक / निजी नीलामी में बेच देने के बारे में नोटिस दिये जाने के अधिकारों को अधित्यजित कर देता हूं/देते हैं।<br>
+I/We specifically do empower you to sell jewels pledged for appropriation towards any amounts due and payable by me/us or any other person/s for whom I/We stand as guarantor/surety/co-obligant/s and waive our rights to notice of such sale of the pledged jewels in public/private auction, as you may deem fit to realise, without prejudice to your right to proceed to recover the aforesaid dues, including the shortfall after appropriation of the sale proceeds. I/We agree and declare that these deeds do not in any way charge the normal rights of lien/set-off available to you as bankers under the provisions of law.<br>
+मैं / हम सहमत होता हूं/ होते हैं और घोषणा करता हूं/ करते हैं कि ये विलेख, विधि के प्रावधानों के अंतर्गत बैंकरों के रूप म आपकों उपलब्ध सामान्य ग्रहणाधिकार/सेट-आफ के अधिकारों को किसी भी तरह प्रभारित नहीं करतें ।
+<br>
+I/we agree and declare that these presents shall in no way affect your right of general lien/set off as available to you as bankers under the provision of law.<br>क्या हमारे बैंक के अध्यक्ष / निदशकों / किसी कर्मचारी बैंक के कर्मचारी के संबंधी हैं, अगर हां, तो ब्यौरा प्रस्तुत करें।<br> Whether related to Chairman/Director of our Bank/any employees of our Bank. If yes, furnish full details.<br>
+मैं/ हम ने समझ लिया हैं कि मुझे / हमें ऋण/अग्रिम/अन्य गैर निधि आधारित ऋण सुविधाएं प्रदान करने के संबंध में पूर्व शर्त के रूप में मेरे / हमारे द्वारा ली गई/ली जानेवाली ऋण सुविधा, मेरे / हमारे द्वारा उठाए गए / जाने वाले दायित्व व उसकी पूर्ति मेरे / हमारे द्वारा की गई चूक के संबंध में कोई भी सूचना व आंकड़े माहिष्मती नागरिक सहकारी बैंक लिमिटेड. मण्डला द्वारा प्रकट की जाने की सहमति देनी अपेक्षित हैं ।
+<br>
+I/We, understand that as a pre-condition, relating to grant of the loans/advances/other non-fund based credit facilities to me/us, the MAHISMATI NAGRIK SAHAKARI BANK LTD. MANDLA, requires my/our consent for the disclosure by the bank of information and data relating to me/us, of the credit facility availed of /to be availed, by me/us, obligations assumed/to be assumed, by me/us, in relation thereto and default, if any, committed by me/us, in discharge thereof.<br>
+तदनुसार, मैं / हम एतद्वारा सहमत हैं तथा यह सहमति देता देते हैं कि माहिष्मती नागरिक सहकारी बैंक लिमिटेड मण्डला द्वारा ऐसी कोई भी सूचना प्रकट की जाए जो निम्नवत् हैं:<br>
+Accordingly, I/We hereby agree and consent to the disclosure by Mahishmati Nagarik Sahakari Bank Ltd., Mandla of such information as is provided below:<br>
+
+(क) मेरे / हमारे संबंध में सूचना व आंकड़े <br>
+(a) Information and data relating to me/us <br>
+
+(ख) मेरे/हमारे द्वारा ली गई/ली जानेवाली किसी भी ऋण सुविधा के संबंध में सूचना या आंकड़े, तथा<br>
+
+
+(b) The information or data relating to any credit facility availed of/to be availed, by me/us, and<br>
+
+(ग) मेरे / हमारे ऐसे दायित्व के निपटान में मेरे / हमारे द्वारा की गई कोई चूक <br>
+
+( c) default, if any, committed by me/us, in discharge of my /our such obligation.<br>
+
+ मैं / हम घोषणा करता हूं/ करते हैं कि मेरे / हमारे द्वारा माहिष्मती नागरिक सहकारी बैंक लिमिटेड मण्डला को दी गई सूचना व आंकड़े सत्य व सही हैं।<br>
+
+I/we, declare that the information and data furnished by me/us to MAHISMATI NAGRIK SAHAKARI BANK LTD. MANDLA are true and correct.<br>
+
+मैं/ हम वचन देता हूं/देते हैं कि :
+I/We undertake that:<br>
+(क) क्रेडिट इनफारमेषन ब्यूरों (इंडिया) लिमि. तथा इस तरह प्राधिकृत अन्य कोई भी एजेंसी बैंक द्वारा प्रकट की गई कथित सूचना व आंकड़ों को उनके द्वारा योग्य समझे गए तरीके से उपयोग में ला सकते हैं व प्रोसेस कर सकतें हैं। <br>
+(a) the Credit Information Bureau (India) Ltd. And any other agency so authorized may use, process the said information and data disclosed by the Bank in the manner as deemed fit by them; and<br>
+(ख) क्रेडिट इनफारमेषन ब्यूरों (इंडिया) लिमि. तथा इस तरह प्राधिकृत अन्य कोई भी एजेंसी प्रोसेस की गई सूचना था उनके द्वारा तैयार किये गये उनके गुणनफल को विचारार्थ बैंकों / वित्तीय संस्थाओं तथ अन्य ऋण प्रदान करनेवालों या पंजीकृत उपयोगकर्ताओं को इस पक्ष में भारतीय रिजर्व बैंक द्वारा विनिर्दिष्ट रूप में प्रस्तुत कर सकता हैं ।<br>
+
+(b) The Credit Information Bureau (India) Ltd. And any other agency so authorized may furnish for consideration, the processed information and data or products thereof prepared by them, to banks/financial institutions and other credit guarantors or registered users, as may be specified by the Reserve Bank in this behalf.<br>
+आगे, मैं/ हम एतद्वारा पुष्टि करता हूं/ करते हैं कि सी आई बी आई एल/अन्य प्राधिकरणों को दिए गए / जाने वाली सूचना / ब्यौरे के संबंध में मैं/ हम किसी तरह का कोई विवाद प्रस्तुत नही करूंगा / करेगें और यह मुझ / हम पर बंधनकारी हैं ।<br>
+
+Further, I/we hereby confirm that I/we shall not raise any dispute in what so ever manner regarding information/details furnished/to be furnished to CIBIL/other authorities and same is binding on me/us.
+ </p>    </div>
+</div>
+<div class="page-break"></div>
+
+<div class="legal-doc-container">
+    <div class="legal-header">
+        <p>4</p>
+        <p><strong>अनुसूची/SCHEDULE</strong></p>
+        <p>यह अभिलेख आज दिनांक <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span> को इस पर अपने हस्ताक्षर कर दिये हैं ।</p>
+    </div>
+
+    
+<table class="sync-table" id="table2">
+    <thead>
+        <tr>
+            <th width="5%">क्र.</th>
+            <th width="45%">ब्यौरे</th>
+            <th width="15%">सकल वजन (ग्रामों में)</th>
+            <th width="15%">नियत वजन (ग्रामों में )</th>
+            <th width="20%">मूल्यांकन (₹)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>2</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>3</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>4</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>5</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>6</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>7</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+
+        <tr class="total-row" style="font-weight:bold;">
+            <td>कुल</td>
+            <td><input type="text" class="user-input" style="width:90%;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+        </tr>
+    </tbody>
+</table>
+
+    <div style="text-align: right; margin-top: 20px;">
+        <p>उधारकर्ता के हस्ताक्षर / SIGNATURE OF THE BORROWER/S</p>
+    </div>
+<br><br><br><br>
+    <div class="promissory-note">
+        <div class="legal-header">
+            <p><strong>मांग वचन पत्र</strong></p>
+            <p><strong>DEMAND PROMISSORY NOTE</strong></p>
+        </div>
+
+        
+            On demand, I Mr. <span contenteditable="true" class="king" oninput="syncKing(this)" data-placeholder="Enter name"></span>  
+            promise to pay to MAHISMATI NAGRIK SAHAKARI BANK LTD. MANDLA on order the Sum of 
+            <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span>
+             <label> (In words) Rs.</label>
+  <span contenteditable="true" 
+      class="sync-words-field" 
+      oninput="syncWords(this)" 
+      data-placeholder="Enter amount"></span>. 
+            With interest there on at the rate of 
+  <span 
+    contenteditable="true" 
+    class="sync-rate auto-grow-input" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncAndGrow(this)"
+  ></span>
+  <span style="margin-left: 2px;">%</span>
+per yearly rest for value received. 
+            For 1-year (12 Month) Rs <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span>
+              <label> (In words) Rs.</label>
+  <span contenteditable="true" 
+      class="sync-words-field" 
+      oninput="syncWords(this)" 
+      data-placeholder="Enter amount"></span>.
+        </p>
+
+        <p>Dated: <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span></p>
+
+        <div style="margin-top: 40px;">
+            <div class="stamp-placeholder">REVENUE STAMP</div>
+            <p style="text-align: right;">Signature of Borrower</p>
+        </div>
+
+        <div style="margin-top: 20px; font-size: 14px;">
+            Name: <input type="text" class="blank-input" style="width: 300px;"><br>
+            Address: <input type="text" class="blank-input" style="width: 300px;">
+        </div>
+    </div>
+</div> 
+
+
+
+
+
+     
+
+<div class="page-break"></div>
+
+<div class="bank-doc-container">
+    <div class="doc-header" style="text-align: center; margin-bottom: 40px;">
+        <p>5</p>
+        <p><strong>मांग वचन पत्र का सुपुर्दगी पत्र</strong></p>
+        <h2 style="text-decoration: underline;">DEMAND PROMISSORY NOTE DELIVERY LETTER</h2>
+    </div>
+
+    <p>प्रति / To,<br>प्रिय महोदय,</p>
+    
+    <p style="text-align: justify;">
+          कृपया इसमें संलग्न दिनांक  <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span>के मांग वचन पत्र सुपुर्दगी ली जा रही है जो  <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span>रूपये के लिए श्री <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span>  द्वारा माहिष्मती नागरिक सहकारी बैंक लिमिटेड मण्डला के पक्ष में लिया गया है।<br>
+इससे अतिरिक्त हम अतिरिक्त हम आपसे ये नोट करने के लिए निवेदन करते हैं कि पैरा निम्नलिखित अधिनियम 1881 की धारा (क) निहितानुसार आम अनादर की सूचना से अभियुक्त प्राप्त करते ही यह मांग पर अदायगी नहीं होने की दया में बैंक हम में से से किसी को बिना किसी दूसरे की देयता से मुक्त करते हुए अदायगी हेतू समय देने के लिए स्वत्व होगा ।
+
+<br>
+Please take delivery of the accompanying DEMAND PROMISSORY NOTE dated  <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span> for Rs.  <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span> Made by<span contenteditable="true" class="king" oninput="syncKing(this)" data-placeholder="Enter name"></span> . In favor of MAHISMATI NAGRIK SAHAKARI BANK LTD, MANDLA.
+
+We further request you that we dispense with notice I dishonor in terms of section 98 (a) ol the negotiable Instrument Act. 1881 at that in the event of payment not being made on demand the Bank is at liberty to give time for payment to either of us without discharging from liability.
+
+
+
+    <div style="margin-top: 60px; text-align: right;">
+        <p>भवदीय / Yours faithfully</p>
+        <br>
+        <p>__________________________</p>
+        <p>Signature of Borrower</p>
+    </div>
+
+    <p style="margin-top: 50px; font-size: 12px; font-style: italic; border-top: 1px solid #ccc; padding-top: 10px;">
+        Note:- In case of legal dispute English version shall be treated authentic.<br>
+        नोट:- कानूनी विवाद होने की दशा में दस्तावेज का अंग्रेजी पाठ ही माना जायेगा ।
+    </p>
+</div>
+
+<div class="page-break"></div>
+
+<div class="bank-doc-container">
+    <div class="doc-header" style="text-align: center; margin-bottom: 30px;">
+        <h2 style="text-decoration: underline;">घोषणा पत्र</h2>
+    </div>
+
+    <p style="text-align: justify;">
+        मै श्री<span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span>निवासी <span 
+    contenteditable="true" 
+    class="prince" 
+    oninput="syncPrince(this)" 
+    data-placeholder="निवास स्थान"
+  ></span> घोषणा करता हूं कि माहिष्मती नागरिक सहकारी बैंक लिमिटेड मण्डला से मेरे द्वारा स्वयं के आभूषणों को गिरवी रखकर आज दिनांक <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span> को रूपये <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span>का स्वर्ण ऋण लिया जा रहा है, जो कि स्वर्ण आभूषण मेरे स्वयं के हैं एवं सभी स्वर्ण आभूषण बैंक में गिरवी रखे जा रहे है वह सही एवं सत्य है। भविष्य में स्वर्ण आभूषण ऋण में किसी भी प्रकार की धोखाधड़ी या स्वर्ण आभूषणों में असत्यता पाई जाती है तो उसकी सम्पूर्ण जवाबदारी मेरी स्वंय की होगी।
+
+    </p>
+
+    <p>आभूषणों की जानकारी निम्नानुसार</p>
+
+    <table class="sync-table" id="table3">
+    <thead>
+        <tr>
+            <th width="5%">क्र.</th>
+            <th width="45%">ब्यौरे</th>
+            <th width="15%">सकल वजन (ग्रामों में)</th>
+            <th width="15%">नियत वजन (ग्रामों में )</th>
+            <th width="20%">मूल्यांकन (₹)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>2</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>3</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>4</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>5</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>6</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>7</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+
+        <tr class="total-row" style="font-weight:bold;">
+            <td>कुल</td>
+            <td><input type="text" class="user-input" style="width:90%;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+        </tr>
+    </tbody>
+</table>
+
+    <div style="margin-top: 50px;">
+        <div style="float: left;">
+            दिनांक <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span>
+        </div>
+        <div style="float: right; text-align: left;">
+            हस्ताक्षर - ____________________<br><br>
+            नाम - <input type="text" class="user-input" style="width: 200px;"><br>
+            पता - <input type="text" class="user-input" style="width: 200px;">
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+
+
+
+
+
+<div class="page-break"></div>
+
+<div class="bank-doc-container">
+    <div class="bank-letterhead">
+        <h1>माहिष्मती नागरिक सहकारी बैंक लिमिटेड मण्डला (म.प्र.)</h1>
+        <div class="contact-info">
+            मो. 9479864474 ई-मेल mahismatinagrikbankltd@gmail.com<br>
+            web-www.mnsbankmandla.co.in
+        </div>
+    </div>
+
+
+    <div style="margin-top: 30px; width: 100%;">
+    <span style="float: left;">
+        खाता संख्या: <input type="text" class="user-input" style="width: 120px;">
+    </span>
+    <span style="float: right;">
+        दिनांक: <span 
+    contenteditable="true" 
+    class="king-date" 
+    oninput="syncDate(this)" 
+    data-placeholder="DD/MM/YYYY"
+  ></span>
+    </span>
+</div><br><br>
+
+    <div class="receipt-title">—रसीद—</div>
+
+    <p style="text-align: justify; text-indent: 10px;">
+        मै श्री <span contenteditable="true" class="user-input auto-grow-field" data-placeholder="नाम दर्ज करें"></span> निवासी <span 
+    contenteditable="true" 
+    class="prince" 
+    oninput="syncPrince(this)" 
+    data-placeholder="निवास स्थान"
+  ></span> से निम्नलिखित विवरणानुसार सोने के आभूषण रू. <span 
+    contenteditable="true" 
+    class="user-input auto-grow-number sync-loan" 
+    role="textbox" 
+    inputmode="decimal" 
+    data-placeholder="0.00"
+    oninput="syncLoan(this)"
+    onblur="formatToTwoDecimals(this)"
+  ></span> अक्षरी <span contenteditable="true" class="sync-input" oninput="syncAll(this)"aria-placeholder="राशि दर्ज करें (शब्दों में)"></span> रू. मात्र के ऋण के लिए तारण / रहन हेतु प्राप्त किये ।
+    </p>
+
+    <table class="sync-table" id="table4">
+    <thead>
+        <tr>
+            <th width="5%">क्र.</th>
+            <th width="45%">ब्यौरे</th>
+            <th width="15%">सकल वजन (ग्रामों में)</th>
+            <th width="15%">नियत वजन (ग्रामों में )</th>
+            <th width="20%">मूल्यांकन (₹)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>2</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>3</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>4</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>5</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>6</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+        <tr><td>7</td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td><td><input type="text" class="user-input" style="width:90%;"></td></tr>
+
+        <tr class="total-row" style="font-weight:bold;">
+            <td>कुल</td>
+             <td><input type="text" class="user-input" style="width:90%;"></td>
+             <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+            <td><input type="text" class="total-field" readonly style="width:90%; border:none; font-weight:bold;"></td>
+        </tr>
+    </tbody>
+</table>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+        <div style="text-align: center;">
+            <p>__________________________</p>
+            <p><strong>हस्ताक्षर प्राप्तकर्त्ता</strong></p>
+        </div>
+        <div style="text-align: center;">
+            <p>__________________________</p>
+            <p><strong>हस्ताक्षर वरिष्ठ प्रबंधक</strong></p>
+        </div>
+    </div>
+
+    <div class="witness-section">
+        <div class="witness-row">
+            <strong>1.</strong> 
+            <div>
+                नाम: <input type="text" class="user-input" style="width: 250px;"><br>
+                पद: <input type="text" class="user-input" style="width: 250px;">
+            </div>
+        </div>
+        <div class="witness-row">
+            <strong>2.</strong> 
+            <div>
+                नाम: <input type="text" class="user-input" style="width: 250px;"><br>
+                पद: <input type="text" class="user-input" style="width: 250px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="button-group">
+    <button id="printButton" type="button" onclick="changeColorAndPrint()">
+        🖨️ Print
+    </button>
+    <button id="logoutButton" type="button" onclick="logout()">
+        Exit 💨
+    </button>
+</div>
+
+<style>
+    .button-group {
+        display: flex;
+        justify-content: center; /* center horizontally */
+        gap: 20px; /* space between buttons */
+        margin-top: 20px;
+    }
+
+    /* Print button style */
+    #printButton {
+        background-color: blue;
+        color: white;
+        padding: 3px 100px;
+        border: none;
+        cursor: pointer;
+        font-size: 26px;
+        border-radius: 4px;
+        
+    }
+
+    #printButton:hover {
+        opacity: 0.85;
+    }
+
+    /* Logout button style */
+    #logoutButton {
+        background-color: red;
+        color: white;
+        padding: 3px 80px;
+        border: none;
+        cursor: pointer;
+        font-size: 26px;
+        border-radius: 4px;
+        
+    }
+
+    #logoutButton:hover {
+        opacity: 0.85;
+    }
+</style>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
